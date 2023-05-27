@@ -1,6 +1,16 @@
 function generateQRCode() {
     var inputText = document.getElementById('inputText').value;
 
+    // Check if input text is empty
+    if (inputText.trim() === '') {
+        // Clear the canvas
+        var canvas = document.getElementById('qr');
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        return; // Exit the function if there is no input text
+    }
+
     // Clear the canvas
     var canvas = document.getElementById('qr');
     var context = canvas.getContext('2d');
@@ -14,7 +24,8 @@ function generateQRCode() {
     });
 }
 
-let scanner = new Instascan.Scanner({video: document.getElementById('scanner')});
+let scanner = new Instascan.Scanner({ video: document.getElementById('scanner') });
+
 scanner.addListener('scan', function (content) {
     alert('QR code scanned: ' + content);
 });
