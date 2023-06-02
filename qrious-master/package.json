@@ -36,7 +36,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1"
   },
-  "main": "dist/qrious.js",
+  "main": "dist/js/qrious.js",
   "scripts": {
     "build": "grunt build",
     "ci": "grunt ci",
