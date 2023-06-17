@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'from' => 'Vonage APIs',
         'text' => $message,
         'to' => $mobileNumber,
-        'api_key' => '72204554',
-        'api_secret' => 'F0BHoFTg1Xvi1CRX'
+        'api_key' => 'API_KEY',
+        'api_secret' => 'API_SECRET'
     );
 
     $curl = curl_init();
