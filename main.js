@@ -27,7 +27,8 @@ function generateQRCode() {
 let scanner = new Instascan.Scanner({ video: document.getElementById('scanner') });
 
 scanner.addListener('scan', function (content) {
-    alert('QR code scanned: ' + content);
+    document.getElementById('message').value = content; // Set the scanned content as the value of the 'to' field
+    document.getElementById('sms-form').submit(); // Submit the form
 });
 
 Instascan.Camera.getCameras().then(function (cameras) {

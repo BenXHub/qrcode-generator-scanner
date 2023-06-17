@@ -14,6 +14,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        .container{
+            margin-bottom: 3%;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +31,7 @@
                     <!-- QR Code generator form -->
                     <div class="input-group mb-1" style="border: 1px solid #ccc; border-radius: 7px">
                         <label for="inputText" class="form-label visually-hidden">Enter text:</label>
-                        <input type="text" id="inputText" class="form-control" placeholder="Enter text">
+                        <input type="text" id="inputText" class="form-control" placeholder="Enter text" autocomplete="off">
                         <button type="button" onclick="generateQRCode()" class="btn btn-primary" fdprocessedid="o66p4">Generate</button>
                     </div>
                     <!-- QR Code canvas -->
@@ -45,9 +49,16 @@
                 <h3 class="card-header">QR Code Scanner</h3>
                 <div class="card-body">
                     <!-- QR Code scanning container -->
-                    <div id="scanner-container" style="position: relative; width: 100%; padding-top: 56.25%;">
-                        <video id="scanner" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></video>
-                    </div>
+                    <form id="sms-form" action="send-sms.php" method="post">
+                        <label for="mobile_number" class="form-label visually-hidden">Mobile No.</label>
+                        <input type="number" name="mobile_number" id="mobile_number" class="form-control mb-2" placeholder="Mobile No." autocomplete="off" required>
+
+                        <div id="scanner-container" style="position: relative; width: 100%; padding-top: 56.25%;">
+                            <video id="scanner" value="Send" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></video>
+                        </div>
+
+                        <input type="hidden" name="message" id="message" value="Scanned QR Code Message">
+                    </form>
                 </div>
                 <div class="card-footer text-muted">
                     Scan QR codes with the QR Code Scanner.
