@@ -1,10 +1,10 @@
 # QR Code Scanner/Generator
 
-This project consists of a PHP page that includes a QR Code Generator and a QR Code Scanner.
+This project consists of a HTML page that includes a QR Code Generator and a QR Code Scanner.
 
 ## Description
 
-The PHP page provides two main functionalities:
+The HTML page provides two main functionalities:
 
 1. QR Code Generator:
    - Enter text into the input field.
