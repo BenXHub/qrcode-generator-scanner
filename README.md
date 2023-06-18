@@ -1,10 +1,10 @@
 # QR Code Scanner/Generator
 
-This project consists of an HTML page that includes a QR Code Generator and a QR Code Scanner.
+This project consists of a PHP page that includes a QR Code Generator and a QR Code Scanner.
 
 ## Description
 
-The HTML page provides two main functionalities:
+The PHP page provides two main functionalities:
 
 1. QR Code Generator:
    - Enter text into the input field.
@@ -30,10 +30,11 @@ To use this project, follow these steps:
    - The generated QR code will be displayed below the input field.
 
 4. QR Code Scanner:
-   - Allow the web page to access your device's camera when prompted.
-   - Point the camera towards a QR code.
-   - The scanner will automatically detect the QR code and display its content in an alert.
-
+   - Grant access to your device's camera when prompted.
+   - Enter the Mobile No. registered to your Vonage Account.
+   - Align the camera with a QR code.
+   - The scanner will automatically detect the QR code and send it to the provided number.
+     
 ## Requirements
 
 The project requires a web browser that supports HTML5 features, including the `canvas` and `video` elements.
