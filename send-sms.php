@@ -31,33 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     curl_close($curl);
-    ?>
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>SMS Sending Result</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
-            .success {
-                color: green;
-            }
-            .error {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-    <?php if ($result['success']) { ?>
-        <h2 class="success">SMS Sent Successfully!</h2>
-        <pre><?php echo json_encode($result['response'], JSON_PRETTY_PRINT); ?></pre>
-    <?php } else { ?>
-        <h2 class="error">SMS Sending Failed!</h2>
-        <p class="error"><?php echo $result['error']; ?></p>
-    <?php } ?>
-    </body>
-    </html>
-
-<?php } ?>
+    echo json_encode($result, JSON_PRETTY_PRINT);
+}
